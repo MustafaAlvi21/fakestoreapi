@@ -25,7 +25,7 @@
 
 </head>
 
-<body onload="app()">
+<body onload="fetchCart()">
     <!-- HEADER -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -34,7 +34,7 @@
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
@@ -48,12 +48,31 @@
         </nav>
     </header>
 
-    <!-- Store -->
-    <section class="container mt-5">
-        <div class="row" id="store" style="border: 1px solid;">
 
-            <!-- card -->
+    <!-- Store -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-12" id="cartData">
+                <div class="row">
+                    <div class="col-3" style="font-size: x-large; font-weight: 600;"> IMAGR </div>
+                    <div class="col-3" style="font-size: x-large; font-weight: 600;"> TITLE </div>
+                    <div class="col-3" style="font-size: x-large; font-weight: 600;"> QUANTITY </div>
+                    <div class="col-3" style="font-size: x-large; font-weight: 600;"> PRICE </div>
+                </div>
+    
+                <!-- CART ITEM WILL SHOW HERE -->
+            </div>
             
+            <div class="col-12 mt-5" style="border-top: 1px solid gray; border-bottom: 1px solid gray;">
+                <div class="row">
+                    <div class="col-8">
+                        <h1 class="py-3">Total Bill: <span id="totalAmount"></span> </h1>
+                    </div>
+                    <div class="col-4" style="display: flex; align-items: center; justify-content: right;">
+                        <a href="/checkout.html" class="btn btn-primary p-3">Go to Checkout</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </section>
